@@ -3,6 +3,7 @@
  *
  *  Copyright 2015 SmartThings
  *  Derivative Work Copyright 2019 Hans Andersson
+ *  Derivative Work Copyright 2024 John Dowling
  *
  *  Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  *  in compliance with the License. You may obtain a copy of the License at:
@@ -16,7 +17,7 @@
  */
  
 metadata {
-	definition (name: "Yale Assure Z-Wave Lock", namespace: "handersson86", author: "Hans Andersson") {
+	definition (name: "Yale Assure ZW3 Z-Wave Lock", namespace: "johnpdowling", author: "John Dowling") {
 		capability "Actuator"
 		capability "Lock"
 		capability "Polling"
@@ -26,6 +27,7 @@ metadata {
 		capability "Battery"
 		capability "Health Check"
 		capability "Configuration"
+		capability "ContactSensor"
 
 		fingerprint mfr:"0129", prod:"8002", model:"0600", deviceJoinName: "Yale Assure Lock" //YRD416, YRD426, YRD446
 		fingerprint mfr:"0129", prod:"8004", model:"0600", deviceJoinName: "Yale Assure Lock Push Button Deadbolt" //YRD216
